@@ -1,0 +1,97 @@
+---
+import Hero from "./Hero.astro";
+import Projects from "./Projects.astro";
+import Services from "./Services.astro";
+import Process from "./Process.astro";
+import Contact from "./Contact.astro";
+---
+
+<main class="network-about">
+	<Hero />
+	<section class="overview motion-enter" id="role" aria-labelledby="role-title">
+		<p class="eyebrow"><span></span> The role</p>
+		<div>
+			<h2 id="role-title">What does a network administrator do?</h2>
+			<p>Network administrators help organizations connect users, devices, and services. Their work can include maintaining network infrastructure, monitoring performance, resolving connectivity issues, and keeping access and documentation up to date.</p>
+			<p>The role combines technical problem-solving with careful communication and ongoing maintenance.</p>
+		</div>
+	</section>
+
+	<section class="responsibilities" id="responsibilities" aria-labelledby="responsibilities-title">
+		<div class="section-heading">
+			<p class="eyebrow"><span></span> Day-to-day responsibilities</p>
+			<h2 id="responsibilities-title">Keep the network<br />working well.</h2>
+		</div>
+		<div class="responsibility-grid">
+			<article class="responsibility-card motion-enter">
+				<span class="card-number">01</span>
+				<h3>Maintain infrastructure</h3>
+				<p>Support the network equipment and services an organization relies on, and keep records of important changes.</p>
+			</article>
+			<article class="responsibility-card motion-enter" style="--motion-delay: 100ms">
+				<span class="card-number">02</span>
+				<h3>Monitor and troubleshoot</h3>
+				<p>Review network health, investigate disruptions, and help restore normal connectivity.</p>
+			</article>
+			<article class="responsibility-card motion-enter" style="--motion-delay: 200ms">
+				<span class="card-number">03</span>
+				<h3>Manage access and upkeep</h3>
+				<p>Follow approved access policies and maintenance practices to support dependable systems.</p>
+			</article>
+		</div>
+	</section>
+
+	<Services />
+
+	<Process />
+
+	<Projects />
+
+	<section class="approach motion-enter" id="approach" aria-labelledby="approach-title">
+		<p class="eyebrow"><span></span> A steady approach</p>
+		<div>
+			<h2 id="approach-title">Plan. Maintain.<br />Improve.</h2>
+			<p>Reliable networks depend on regular attention: understand the environment, make controlled changes, monitor outcomes, and keep clear records.</p>
+		</div>
+	</section>
+
+	<Contact />
+</main>
+
+<style>
+	.network-about { overflow: hidden; }
+	.overview, .responsibilities { max-width: 1320px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+	.eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 22px; font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+	.eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+	h2, h3 { font-family: var(--font-display); font-weight: 400; }
+	.overview { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; padding-top: 94px; padding-bottom: 104px; border-top: 1px solid var(--line); }
+	.overview > .eyebrow { align-self: start; }
+	.overview h2 { max-width: 650px; margin: 0 0 22px; font-size: clamp(38px, 4.5vw, 58px); letter-spacing: -.05em; line-height: 1; }
+	.overview div > p { max-width: 680px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+	.overview div > p:last-child { margin-bottom: 0; }
+	.responsibilities { padding-top: 70px; padding-bottom: 96px; }
+	.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
+	.section-heading .eyebrow { margin-bottom: 16px; }
+	.section-heading h2 { margin: 0; font-size: clamp(40px, 5vw, 62px); letter-spacing: -.05em; line-height: 1; }
+	.responsibility-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+	.responsibility-card { min-height: 250px; padding: 24px; background: var(--surface); }
+	.responsibility-card:nth-child(2) { background: #e6e1ea; }
+	.responsibility-card:nth-child(3) { background: #e2dce7; }
+	.card-number { color: var(--accent-strong); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+	.responsibility-card h3 { margin: 52px 0 10px; font-size: 24px; letter-spacing: -.03em; }
+	.responsibility-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+	.approach { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; padding: 86px max(32px, calc((100% - 1256px) / 2)); background: linear-gradient(125deg, #3c2850, #514760); color: #fff; }
+	.approach .eyebrow span { background: var(--accent-soft); }
+	.approach h2 { margin: 0 0 18px; color: #e7d8f0; font-size: clamp(42px, 5vw, 62px); letter-spacing: -.05em; line-height: .98; }
+	.approach div > p { max-width: 650px; margin: 0; color: #e3dfe7; font-size: 17px; line-height: 1.75; }
+	@media (max-width: 760px) {
+		.overview, .responsibilities { padding-left: 20px; padding-right: 20px; }
+		.overview { grid-template-columns: 1fr; gap: 22px; padding-top: 72px; padding-bottom: 78px; }
+		.responsibilities { padding-top: 60px; padding-bottom: 78px; }
+		.section-heading { display: block; }
+		.responsibility-grid { grid-template-columns: 1fr; }
+		.responsibility-card { min-height: 210px; }
+		.responsibility-card h3 { margin-top: 38px; }
+		.approach { grid-template-columns: 1fr; gap: 24px; padding: 72px 20px; }
+	}
+</style>

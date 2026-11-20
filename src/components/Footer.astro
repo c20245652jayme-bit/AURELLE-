@@ -1,0 +1,54 @@
+<footer>
+	<div>
+		<p>N/A · Network administration</p>
+		<a href="/#role">Keeping systems connected. <span aria-hidden="true">↗</span></a>
+	</div>
+	<div class="footer-bottom">
+		<span>© {new Date().getFullYear()} N/A · Networks, made reliable</span>
+		<div>
+			<a href="/#responsibilities">Responsibilities</a>
+			<a href="/#services">Services</a>
+			<a href="/#process">Process</a>
+			<a href="/#projects">Projects</a>
+			<a href="/#approach">Approach</a>
+			<a href="/#contact">Contact</a>
+		</div>
+	</div>
+</footer>
+
+<style>
+	footer {
+		background: var(--ink);
+		color: var(--paper);
+		padding: 70px max(32px, calc((100% - 1256px) / 2)) 30px;
+	}
+	footer > div:first-child p {
+		margin: 0 0 12px;
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: 800;
+		letter-spacing: .14em;
+	}
+	footer > div:first-child a {
+		font-family: Georgia, serif;
+		font-size: clamp(38px, 5vw, 68px);
+		letter-spacing: -.055em;
+		text-decoration: none;
+		color: var(--paper);
+	}
+	.footer-bottom {
+		margin-top: 80px;
+		border-top: 1px solid rgba(250,248,243,.28);
+		padding-top: 20px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 12px;
+	}
+	.footer-bottom div { display: flex; gap: 28px; }
+	.footer-bottom a { color: var(--paper); text-decoration: none; }
+	@media (max-width: 620px) {
+		footer { padding: 55px 20px 25px; }
+		.footer-bottom { margin-top: 55px; gap: 20px; }
+		.footer-bottom div { flex-wrap: wrap; gap: 14px; }
+	}
+</style>

@@ -1,0 +1,54 @@
+---
+import BrandLogo from "./BrandLogo.astro";
+---
+
+<header class="nav-wrap">
+	<nav class="nav" aria-label="Main navigation">
+		<BrandLogo />
+		<div class="nav-links">
+			<a class="mobile-hide" href="/#top">Home</a>
+			<a href="/#role">The role</a>
+			<a class="mobile-hide" href="/#responsibilities">Responsibilities</a>
+			<a class="mobile-hide" href="/#services">Services</a>
+			<a class="mobile-hide" href="/#process">Process</a>
+			<a href="/#projects">Projects</a>
+			<a href="/#contact">Contact</a>
+		</div>
+	</nav>
+</header>
+
+<style>
+	.nav-wrap {
+		height: 88px;
+		border-bottom: 1px solid var(--line);
+		background: rgba(247,246,248,.94);
+	}
+	.nav {
+		max-width: 1320px;
+		height: 100%;
+		margin: 0 auto;
+		padding: 0 32px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: 26px;
+		font-size: 14px;
+	}
+	.nav-links a {
+		text-decoration: none;
+	}
+	.contact-link {
+		border-bottom: 1px solid var(--accent-strong);
+		padding-bottom: 4px;
+	}
+	@media (max-width: 620px) {
+		.nav-wrap { height: 70px; }
+		.nav { padding: 0 16px; }
+		.nav-links { gap: 14px; font-size: 12px; }
+		.mobile-hide { display: none; }
+	}
+</style>

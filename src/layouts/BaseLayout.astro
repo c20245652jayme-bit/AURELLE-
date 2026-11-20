@@ -1,0 +1,59 @@
+---
+import "../../style/global.css";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#f7f6f8" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<link rel="icon" type="image/png" href="/na-logo.png" />
+		<title>{title}</title>
+		<script is:inline>
+			document.documentElement.classList.add("motion-ready");
+		</script>
+	</head>
+	<body>
+		<slot />
+		<script is:inline>
+			const revealElements = Array.from(document.querySelectorAll(".motion-enter"));
+			const revealAll = () => revealElements.forEach((element) => element.classList.add("motion-visible"));
+			const revealVisible = () => {
+				const viewportBottom = window.innerHeight - 48;
+
+				revealElements.forEach((element) => {
+					if (element.classList.contains("motion-visible")) return;
+
+					const bounds = element.getBoundingClientRect();
+					if (bounds.top < viewportBottom) {
+						element.classList.add("motion-visible");
+					}
+				});
+
+				if (revealElements.every((element) => element.classList.contains("motion-visible"))) {
+					window.removeEventListener("scroll", revealVisible);
+					window.removeEventListener("resize", revealVisible);
+				}
+			};
+
+			if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+				revealAll();
+			} else {
+				window.addEventListener("scroll", revealVisible, { passive: true });
+				window.addEventListener("resize", revealVisible);
+				revealVisible();
+			}
+		</script>
+	</body>
+</html>

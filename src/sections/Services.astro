@@ -1,0 +1,75 @@
+<section class="services" id="services" aria-labelledby="services-title">
+	<div class="services-heading">
+		<div>
+			<p class="eyebrow"><span></span> Service areas</p>
+			<h2 id="services-title">Support from setup to upkeep.</h2>
+		</div>
+	</div>
+
+	<div class="service-grid">
+		<article class="service-card motion-enter">
+			<div class="service-top"><span class="service-number">01</span><span class="service-type">INFRASTRUCTURE</span></div>
+			<h3>Network setup &amp; changes</h3>
+			<p>Plan and maintain network equipment and connections, with changes documented and coordinated with the team.</p>
+			<ul aria-label="Related tasks">
+				<li>Equipment setup</li>
+				<li>Network changes</li>
+			</ul>
+		</article>
+		<article class="service-card motion-enter" style="--motion-delay: 80ms">
+			<div class="service-top"><span class="service-number">02</span><span class="service-type">RELIABILITY</span></div>
+			<h3>Monitoring &amp; troubleshooting</h3>
+			<p>Review service health and investigate connection or performance issues using approved support procedures.</p>
+			<ul aria-label="Related tasks">
+				<li>Availability checks</li>
+				<li>Issue resolution</li>
+			</ul>
+		</article>
+		<article class="service-card motion-enter" style="--motion-delay: 160ms">
+			<div class="service-top"><span class="service-number">03</span><span class="service-type">USER SUPPORT</span></div>
+			<h3>Device connectivity</h3>
+			<p>Help users connect workstations, printers, and other approved devices to the organization’s network.</p>
+			<ul aria-label="Related tasks">
+				<li>Wired connections</li>
+				<li>Wireless access</li>
+			</ul>
+		</article>
+		<article class="service-card motion-enter" style="--motion-delay: 240ms">
+			<div class="service-top"><span class="service-number">04</span><span class="service-type">OPERATIONS</span></div>
+			<h3>Access &amp; documentation</h3>
+			<p>Keep network records and access processes organized in line with established policies and responsibilities.</p>
+			<ul aria-label="Related tasks">
+				<li>Asset records</li>
+				<li>Change notes</li>
+			</ul>
+		</article>
+	</div>
+</section>
+
+<style>
+	.services { max-width: 1320px; margin: 0 auto; padding: 82px 32px 96px; }
+	.services-heading { margin-bottom: 38px; }
+	.eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 16px; font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+	.eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+	.services h2, .service-card h3 { font-family: var(--font-display); font-weight: 400; }
+	.services h2 { max-width: 680px; margin: 0; font-size: clamp(40px, 5vw, 62px); letter-spacing: -.05em; line-height: 1; }
+	.service-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+	.service-card { min-width: 0; min-height: 300px; padding: 22px; border: 1px solid var(--line); background: var(--surface); }
+	.service-card:nth-child(even) { background: #e8e4eb; }
+	.service-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+	.service-number { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid rgba(111,52,143,.32); border-radius: 50%; color: var(--accent-strong); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+	.service-type { color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .13em; text-align: right; }
+	.service-card h3 { margin: 34px 0 10px; font-size: 23px; letter-spacing: -.03em; line-height: 1.08; }
+	.service-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+	.service-card ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 0; padding: 0; list-style: none; }
+	.service-card li { padding: 6px 8px; background: rgba(255,255,255,.62); color: #51475a; font-size: 9px; font-weight: 700; }
+	@media (max-width: 1000px) {
+		.service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	}
+	@media (max-width: 680px) {
+		.services { padding: 64px 20px 76px; }
+		.service-grid { grid-template-columns: 1fr; }
+		.service-card { min-height: 250px; }
+		.service-card h3 { margin-top: 30px; }
+	}
+</style>
