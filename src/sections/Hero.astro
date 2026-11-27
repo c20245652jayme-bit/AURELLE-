@@ -5,20 +5,8 @@
 		<p class="intro">Network administrators help keep an organization’s devices and systems connected, reliable, and available.</p>
 		<a class="button" href="#role">Explore the role <span aria-hidden="true">↓</span></a>
 	</div>
-	<div class="network-art motion-enter" style="--motion-delay: 140ms" role="img" aria-label="Connected network nodes surrounding a server rack">
-		<div class="orbit orbit-one"></div>
-		<div class="orbit orbit-two"></div>
-		<div class="connection connection-left"></div>
-		<div class="connection connection-right"></div>
-		<div class="server-stack" aria-hidden="true">
-			<div><span></span><i></i><i></i><i></i></div>
-			<div><span></span><i></i><i></i><i></i></div>
-			<div><span></span><i></i><i></i><i></i></div>
-		</div>
-		<span class="node node-left"></span>
-		<span class="node node-right"></span>
-		<span class="node node-top"></span>
-		<p class="art-caption">SYSTEMS · CONNECTIVITY · RELIABILITY</p>
+	<div class="hero-photo motion-enter" style="--motion-delay: 140ms">
+		<img src="/hero-photo.jpg" alt="Two people posing outdoors" width="768" height="1024" decoding="async" />
 	</div>
 </section>
 
@@ -40,31 +28,14 @@
 	.intro { max-width: 460px; margin: 22px 0 24px; color: var(--muted); font-size: 16px; line-height: 1.7; }
 	.button { display: inline-flex; align-items: center; gap: 14px; padding: 0 0 5px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 12px; font-weight: 600; text-decoration: none; transition: color .18s ease, border-color .18s ease; }
 	.button:hover { border-color: var(--accent-strong); color: var(--accent-strong); }
-	.network-art { position: relative; min-height: 360px; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
-	.orbit { position: absolute; width: 260px; height: 260px; border: 1px solid #e3dfe5; border-radius: 50%; }
-	.orbit-one { box-shadow: none; }
-	.orbit-two { width: 168px; height: 168px; border-color: #e8e5e9; }
-	.server-stack { z-index: 2; width: 126px; display: grid; gap: 6px; padding: 8px; border: 1px solid #d8d5da; background: #fff; }
-	.server-stack div { height: 44px; display: flex; align-items: center; gap: 7px; padding: 0 9px; border: 1px solid #e3e0e5; background: #faf9fa; }
-	.server-stack span { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-	.server-stack i { width: 6px; height: 14px; border-radius: 1px; background: #d9d5dc; }
-	.connection { position: absolute; z-index: 1; width: 80px; height: 1px; background: #c9c4cc; }
-	.connection-left { left: 18%; transform: rotate(-24deg); }
-	.connection-right { right: 18%; transform: rotate(24deg); }
-	.node { position: absolute; z-index: 3; width: 10px; height: 10px; border: 2px solid var(--accent-strong); border-radius: 50%; background: #fff; }
-	.node-left { left: 20%; top: 37%; }
-	.node-right { right: 20%; top: 63%; }
-	.node-top { top: 18%; left: calc(50% - 6px); }
-	.art-caption { position: absolute; bottom: 16px; left: 18px; margin: 0; color: var(--muted); font-size: 8px; font-weight: 600; letter-spacing: .14em; }
+	.hero-photo { height: clamp(320px, 34vw, 430px); overflow: hidden; background: var(--surface); }
+	.hero-photo img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
 	@media (max-width: 760px) {
 		.hero { grid-template-columns: 1fr; gap: 38px; padding: 50px 20px 64px; }
-		.network-art { min-height: 330px; }
+		.hero-photo { height: 350px; }
 	}
 	@media (max-width: 450px) {
 		h1 { font-size: 46px; }
-		.network-art { min-height: 285px; }
-		.orbit { width: 220px; height: 220px; }
-		.orbit-two { width: 150px; height: 150px; }
-		.connection { width: 60px; }
+		.hero-photo { height: 300px; }
 	}
 </style>
