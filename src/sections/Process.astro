@@ -38,26 +38,25 @@
 </section>
 
 <style>
-	.process { max-width: 1320px; margin: 0 auto; padding: 82px 32px 96px; }
-	.process-heading { display: grid; grid-template-columns: 1fr minmax(260px, .7fr); align-items: end; gap: 20px 48px; margin-bottom: 38px; }
+	.process { max-width: 1320px; margin: 0 auto; padding: 66px 32px 78px; }
+	.process-heading { display: grid; grid-template-columns: 1fr minmax(260px, .7fr); align-items: end; gap: 20px 48px; margin-bottom: 32px; }
 	.eyebrow { grid-column: 1 / -1; display: flex; align-items: center; gap: 9px; margin: 0; font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 	.eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 	.process-heading h2 { max-width: 700px; margin: 0; font-family: var(--font-display); font-size: clamp(40px, 5vw, 62px); font-weight: 400; letter-spacing: -.05em; line-height: 1; }
 	.process-heading > p:last-child { max-width: 420px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
-	.process-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; counter-reset: process; }
-	.process-step { min-height: 228px; padding: 22px; border-top: 2px solid var(--accent-strong); background: var(--surface); }
-	.process-step:nth-child(even) { background: #e8e4eb; }
-	.step-number { display: block; margin-bottom: 42px; color: var(--accent-strong); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+	.process-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; counter-reset: process; }
+	.process-step { min-height: 196px; padding: 16px 0 0; border-top: 1px solid var(--line); background: transparent; }
+	.step-number { display: block; margin-bottom: 32px; color: var(--accent-strong); font-size: 10px; font-weight: 700; letter-spacing: .12em; }
 	.process-step h3 { margin: 0 0 9px; font-family: var(--font-display); font-size: 23px; font-weight: 400; letter-spacing: -.03em; }
 	.process-step p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 	@media (max-width: 900px) {
 		.process-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	}
 	@media (max-width: 680px) {
-		.process { padding: 64px 20px 76px; }
+		.process { padding: 54px 20px 64px; }
 		.process-heading { grid-template-columns: 1fr; gap: 18px; }
 		.process-steps { grid-template-columns: 1fr; }
 		.process-step { min-height: auto; }
-		.step-number { margin-bottom: 26px; }
+		.step-number { margin-bottom: 20px; }
 	}
 </style>
